@@ -2,6 +2,12 @@
 
 $data = json_decode(file_get_contents('php://input'));
 
+if(empty($data->bless)){
+    http_response_code(404);
+    echo json_encode(['message' => 'คุณยังไม่ได้ ลงนามถวายพระพร']);
+    exit;
+}
+
 $sql = "INSERT INTO blessing (txt, fullname, ip) VALUES (?,?,?)";
 $stmt= $conn_db->prepare($sql);
 $stmt->execute([
