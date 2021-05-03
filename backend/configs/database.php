@@ -2,9 +2,9 @@
 
 //define('MYSQL_ASSOC',MYSQLI_ASSOC);
 
-$dsn = "mysql:host=192.168.100.1;dbname=supply";
-$user = "noom";
-$passwd = "";
+$dsn = "mysql:host=detudomhospital.org;dbname=hospital-detudom";
+$user = "root";
+$passwd = "detudom11433";
 try {
     $conn_db = new PDO($dsn, $user, $passwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"));
     $conn_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
