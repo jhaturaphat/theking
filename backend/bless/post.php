@@ -9,4 +9,5 @@ $stmt->execute([
     $data->fullname,
     $_SERVER['REMOTE_ADDR']
 ]);
+http_response_code(200);
 echo json_encode(['message' => 'success']);
