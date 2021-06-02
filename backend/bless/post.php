@@ -8,12 +8,13 @@ if(empty($data->bless)){
     exit;
 }
 
-$sql = "INSERT INTO blessing (txt, fullname, ip) VALUES (?,?,?)";
+$sql = "INSERT INTO blessing (txt, fullname, ip, king_type) VALUES (?,?,?,?)";
 $stmt= $conn_db->prepare($sql);
 $stmt->execute([
     $data->bless,
     $data->fullname,
-    $_SERVER['REMOTE_ADDR']
+    $_SERVER['REMOTE_ADDR'],
+    'พระบรมราชินี_64'
 ]);
 http_response_code(200);
 echo json_encode(['message' => 'สำเร็จ']);
