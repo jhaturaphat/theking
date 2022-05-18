@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <img src="assets/images/วันพระราชสมภพราชินี_64.jpg" class="img-fluid">
+        <img src="assets/images/coronation.jpg" class="img-fluid">
         <div class="card-body">
             <h1 class="card-title text-center">ลงนามถวายพระพรออนไลน์</h1>
             <h4 class="card-text text-center">โรงพยาบาลสมเด็จพระยุพราชเดชอุดม</h4>
@@ -56,7 +56,8 @@
     function blessing(){
         var data = {
             'bless':$("#bless").val(),
-            'fullname':$("#fullname").val()
+            'fullname':$("#fullname").val(),
+            'king_type':'วันฉัตรมงคล_65'
         }
         //http://localhost/help-desk-api/index.php?r=/api/pcinfo
         $.ajax({ 
@@ -100,9 +101,9 @@
         font-family: king !important;   
     }
     .container{
-        color: #ffd333;
+        color: #785f14;
         text-shadow: 0px 0px 1px;
-        background-color: #b48fd2 !important;
+        background-color: #f9e0ab !important;
         height: 100%;
         box-shadow: 0 2px 15px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
         font-family: king;        
